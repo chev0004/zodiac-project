@@ -1,0 +1,52 @@
+{
+    "zodiacSigns": [
+        {
+            "title": "Capricorn",
+            "description": "Capricorns are known for their practicality and determination. They're hardworking and ambitious, always striving to reach their goals. They have a great sense of responsibility and often take on leadership roles. Capricorns can be a bit cautious, but they're also incredibly loyal and reliable friends."
+        },
+        {
+            "title": "Aquarius",
+            "description": "Aquarians are known for their creativity and independence. They march to the beat of their own drum and are always up for trying new and innovative things. They have a strong sense of individuality and can be quite eccentric at times."
+        },
+        {
+            "title": "Pisces",
+            "description": "Pisces are known for their dreamy and compassionate nature. They're incredibly empathetic and often put others' needs before their own. These individuals are imaginative and have a strong connection to the arts."
+        },
+        {
+            "title": "Aries",
+            "description": "Aries are known for their fiery and adventurous spirit. They're natural leaders and aren't afraid to take charge of a situation. They have a lot of energy and enthusiasm, making them great initiators."
+        },
+        {
+            "title": "Taurus",
+            "description": "Taurus individuals are known for their practical and down-to-earth nature. They're incredibly reliable and are often the ones you can count on. They have a strong connection to the material world and enjoy life's pleasures, like good food and comfort."
+        },
+        {
+            "title": "Gemini",
+            "description": "Geminis are known for their quick wit and adaptability. They're curious and love to learn new things, often juggling multiple interests. These individuals have a chameleon-like quality, easily adapting to different social situations."
+        },
+        {
+            "title": "Cancer",
+            "description": "Cancers are known for their nurturing and sensitive nature. They deeply care for their loved ones and create a strong emotional bond with family and friends. They can be a bit shy at times, but once you get to know them, they're incredibly loyal and protective."
+        },
+        {
+            "title": "Leo",
+            "description": "Leos are known for their confidence and natural leadership abilities. They have a regal and charismatic presence that draws people to them. They love being in the spotlight and enjoy expressing themselves creatively."
+        },
+        {
+            "title": "Virgo",
+            "description": "Virgos are known for their attention to detail and practicality. They have a strong work ethic and strive for perfection in everything they do. These individuals are often the ones you can rely on for well-thought-out advice."
+        },
+        {
+            "title": "Libra",
+            "description": "Libras are known for their charm and sense of balance. They have a natural ability to see both sides of a situation, making them great mediators and peacemakers. They appreciate beauty and harmony in all aspects of life."
+        },
+        {
+            "title": "Scorpio",
+            "description": "Scorpios are known for their intensity and passion. They have a deep and mysterious nature, often keeping their true thoughts and feelings hidden. They are highly determined and never back down from a challenge."
+        },
+        {
+            "title": "Sagittarius",
+            "description": "Sagittarians are known for their adventurous and optimistic spirit. They have a love for exploration and new experiences, always seeking to broaden their horizons. They're quite straightforward and value their independence."
+        }
+    ]
+}

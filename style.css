@@ -1,0 +1,271 @@
+body {
+    background-color: black;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Rokkitt;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-image: url('/images/bg.jpg');
+}
+
+body::before {
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: fixed;
+}
+
+.main {
+    top: 70px;
+    left: 50%;
+    opacity: 0;
+    height: 400px;
+    width: 1000px;
+    display: flex;
+    position: absolute;
+    transition: transform 2s, opacity 2s;
+    transform: translateX(-50%) translateY(100%);
+}
+
+h1 {
+    left: 50%;
+    font-size: 4rem;
+    position: relative;
+    transform: translateX(-50%);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 40);
+}
+
+.desc {
+    left: 50%;
+    width: fit-content;
+    top: 120px;
+    font-size: 1rem;
+    position: absolute;
+    word-wrap: unset;
+    transform: translateX(-50%);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 40);
+}
+
+.dropdowns {
+    flex: 1;
+    left: 330px;
+    right: 330px;
+    bottom: 20px;
+    height: 230px;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+}
+
+.tab {
+    top: 0px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 40);
+}
+
+.tab.d {
+    right: 10px;
+}
+
+.tab:hover {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown.d {
+    display: none;
+}
+
+.item {
+    padding: 0 5.8px;
+}
+
+a.item {
+    width: 52px;
+    color: inherit;
+    margin-left: 0;
+    text-align: left;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.dropdownMenu {
+    background-color: #1f1e1e;
+    color: #fff;
+    top: 30px;
+    opacity: 0;
+    width: 64px;
+    right: 1px;
+    z-index: 2;
+    padding: 2px;
+    height: 171px;
+    text-align: left;
+    padding-top: 4px;
+    position: absolute;
+    font-size: 0.78rem;
+    overflow-y: scroll;
+    visibility: hidden;
+    padding-right: 4px;
+    border-radius: 4px;
+    transform: translateY(-8px);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.4s, visibility 0.2s, transform 0.4s;
+}
+
+.dropdownMenu.m {
+    height: fit-content;
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.4s;
+}
+
+.item:hover {
+    background-color: #444444;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.tab:hover + .dropdownMenu,
+.dropdownMenu:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.smonth {
+    font-size: 3rem;
+    position: relative;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 40);
+}
+
+.sday {
+    font-size: 3rem;
+    position: relative;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 40);
+}
+
+.selecticles {
+    flex: 1;
+    left: 50%;
+    gap: 40px;
+    bottom: -80px;
+    display: flex;
+    padding: 0 90px;
+    width: fit-content;
+    position: absolute;
+    transform: translateX(-50%);
+    justify-content: space-between;
+}
+
+.calcBox {
+    position: absolute;
+    bottom: 10px;
+}
+
+.calculate {
+    background-color: rgb(255, 253, 201);
+    color: rgb(0, 0, 0);
+    opacity: 0;
+    left: 414px;
+    width: 184px;
+    bottom: 10px;
+    border: none;
+    height: 184px;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.24s, opacity 0.4s;
+    box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.6);
+}
+
+.calculate.active {
+    opacity: 1;
+}
+
+.calculate:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 40px rgba(255, 253, 201, 0.6);
+}
+
+.calculate p {
+    font-size: 2rem;
+}
+
+.allDim {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    position: fixed;
+    transition: opacity 0.6s;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.poppy {
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: 2;
+    width: 600px;
+    height: 190px;
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+    transition: opacity 0.6s;
+    justify-content: space-around;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.6);
+}
+
+.poppyTitle {
+    color: black;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.poppyPop {
+    color: black;
+    margin: 0;
+    font-size: 4rem;
+}
+
+.poppyDesc {
+    color: black;
+    margin: 0;
+    width: 90%;
+    bottom: 4px;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.poppyImg {
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    opacity: 0.4;
+    height: 180px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
