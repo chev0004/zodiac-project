@@ -137,8 +137,27 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             //if sday and smonth both exist, and the user still decides to click a month element, remove sday, essentially resetting the options. this prevents the user from being able to choose February 31, or other illegal dates
             if (smonth && sday) {
+                const calcBtn = document.querySelector('.calculate');
+                calcBtn.style.opacity = 0;
+                setTimeout(() => {
+                    calcBtn.remove();
+                }, 100);
+                const calculateButton = document.createElement('div');
+                calculateButton.classList.add('ncalculate');
+                const pelement = document.createElement('p');
+                pelement.textContent = 'Calculate!';
+                calculateButton.appendChild(pelement);
+                const calcBox = document.querySelector('.calcBox');
+                calcBox.appendChild(calculateButton);
+                setTimeout(() => {
+                    calculateButton.style.opacity = '1';
+                }, 4);
                 smonth.replaceWith(newSmonth);
                 sday.remove();
+
+                //replace original style with invalid
+                calculateButton.classList.remove('calculate');
+                calculateButton.classList.add('ncalculate');
                 //reset variable so it's back to falsy
                 sday = '';
             } else if (smonth) {
@@ -181,7 +200,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             ddd.style.display = 'block';
 
             //if there are both selected days and months, asign the signs and sign descriptions to their appropriate values
-            if (selectedMonth && selectedDay) {
+            if (smonth && sday) {
                 sign = zodialc(selectedMonth, selectedDay);
                 signDesc = zodesc(selectedMonth, selectedDay);
                 console.log(
@@ -271,7 +290,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             sday = newSday;
 
             //it's the same process with the selected month
-            if (selectedMonth && selectedDay) {
+            if (smonth && sday) {
                 sign = zodialc(selectedMonth, selectedDay);
                 signDesc = zodesc(selectedMonth, selectedDay);
                 console.log(
@@ -280,7 +299,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     selectedDay
                 );
 
-                //same with this one
+                //creation of calculate button
                 const calculateButton = document.createElement('div');
                 calculateButton.classList.add('calculate');
                 const pelement = document.createElement('p');
@@ -288,6 +307,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 calculateButton.appendChild(pelement);
                 const calcBox = document.querySelector('.calcBox');
                 calcBox.appendChild(calculateButton);
+
+                //set a teenie weenie amount of delay so it has time to animate in
                 setTimeout(() => {
                     calculateButton.style.opacity = '1';
                 }, 4);
