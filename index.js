@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     main.style.opacity = 1;
     main.style.transform = 'translateY(0%) translateX(-50%)';
 
-    //arrow spin thingy
+    //arrow spin thing
 
     //so like, I want to get the arrow to spin right
     //it starts at 0 degrees, meaning no rotation
@@ -139,6 +139,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (smonth && sday) {
                 smonth.replaceWith(newSmonth);
                 sday.remove();
+                //reset variable so it's back to falsy
+                sday = '';
             } else if (smonth) {
                 //if an <a> element already exists, replace it. otherwise proceed normally
                 smonth.replaceWith(newSmonth);
@@ -245,7 +247,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             `${event.target.classList[0]} ${event.target.classList[1]}` ==
             'item d'
         ) {
-            console.log('clicked');
             if (!selectedMonth) {
                 return;
             }
