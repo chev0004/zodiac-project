@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     main.style.opacity = 1;
     main.style.transform = 'translateY(0%) translateX(-50%)';
 
-    //arrow spin thing
+    //arrow spin thingy
 
     //so like, I want to get the arrow to spin right
     //it starts at 0 degrees, meaning no rotation
